@@ -1,0 +1,6 @@
+{
+  "parent": "tutorialmod:item/aris_bow",
+  "textures": {
+    "layer0": "tutorialmod:item/aris_bow_pulling_1"
+  }
+}

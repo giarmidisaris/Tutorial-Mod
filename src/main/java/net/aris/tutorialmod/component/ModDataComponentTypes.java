@@ -1,5 +1,6 @@
 package net.aris.tutorialmod.component;
 
+import com.mojang.serialization.Codec;
 import net.aris.tutorialmod.TutorialMod;
 import net.minecraft.component.ComponentType;
 import net.minecraft.registry.Registries;
@@ -11,6 +12,8 @@ import java.util.function.UnaryOperator;
 
 public class ModDataComponentTypes {
     public static final ComponentType<BlockPos> COORDINATES = register("coordinates",builder -> builder.codec(BlockPos.CODEC));
+    public static final ComponentType<Boolean> USED =
+            register("used", b -> b.codec(Codec.BOOL));
     private static <T> ComponentType<T> register(String name, UnaryOperator<ComponentType.Builder<T>> builderOperator){
         return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(TutorialMod.MOD_ID,name),
                 builderOperator.apply(ComponentType.builder()).build());
