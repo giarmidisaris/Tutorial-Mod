@@ -125,5 +125,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S', Items.STICK)
                 .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
                 .offerTo(exporter);
+        offerSmithingTrimRecipe(exporter, ModItems.ARIS_SMITHING_TEMPLATE, Identifier.of(TutorialMod.MOD_ID, "aris"));
     }
 }

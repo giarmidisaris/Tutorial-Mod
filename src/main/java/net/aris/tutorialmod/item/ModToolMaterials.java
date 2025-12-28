@@ -13,7 +13,7 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    PINK_GARNET(ModTags.Blocks.INCORRECT_FOR_PINK_GARNET_TOOL, 1200, 5.0F, 4.0F, 22, () -> Ingredient.ofItems(ModItems.PINK_GARNET));
+    PINK_GARNET(BlockTags.INCORRECT_FOR_IRON_TOOL, 1200, 5.0F, 4.0F, 22, () -> Ingredient.ofItems(ModItems.PINK_GARNET));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
