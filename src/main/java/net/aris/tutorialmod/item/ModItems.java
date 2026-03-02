@@ -1,9 +1,12 @@
 package net.aris.tutorialmod.item;
 
 import net.aris.tutorialmod.TutorialMod;
+import net.aris.tutorialmod.block.ModBlocks;
+import net.aris.tutorialmod.entity.ModEntities;
 import net.aris.tutorialmod.item.custom.ChiselItem;
 import net.aris.tutorialmod.item.custom.HammerItem;
 import net.aris.tutorialmod.item.custom.ModArmorItem;
+import net.aris.tutorialmod.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
@@ -72,9 +75,21 @@ public class ModItems {
     public static final Item ARIS_BOW = registerItem("aris_bow",
             new BowItem(new Item.Settings().maxDamage(500)));
 
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new Item(new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).maxCount(1)));
+    public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
+            new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP,new Item.Settings()));
+
+    public static final Item HONEY_BERRIES = registerItem("honey_berries",
+            new AliasedBlockItem(ModBlocks.HONEY_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.HONEY_BERRY)));
+
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name),item);
     }
+
+    public static final Item MANTIS_SPAWN_EGG = registerItem("mantis_spawn_egg",
+            new SpawnEggItem(ModEntities.MANTIS, 0x9dc783, 0xbfaf5f, new Item.Settings()));
+
     public static void registerModItems(){
         TutorialMod.LOGGER.info("Registering Mod Items for "+TutorialMod.MOD_ID);
 

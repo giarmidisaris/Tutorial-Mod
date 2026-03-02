@@ -1,8 +1,11 @@
 package net.aris.tutorialmod;
 
 import net.aris.tutorialmod.datagen.*;
+import net.aris.tutorialmod.enchantment.ModEnchanments;
 import net.aris.tutorialmod.trim.ModTrimMaterials;
 import net.aris.tutorialmod.trim.ModTrimPatterns;
+import net.aris.tutorialmod.world.ModConfiguredFeatures;
+import net.aris.tutorialmod.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -24,5 +27,9 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchanments::bootstrap);
+
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }

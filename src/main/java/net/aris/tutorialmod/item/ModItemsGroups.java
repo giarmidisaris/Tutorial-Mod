@@ -37,6 +37,10 @@ public class ModItemsGroups {
                         entries.add(ModItems.PINK_GARNET_HORSE_ARMOR);
                         entries.add(ModItems.ARIS_SMITHING_TEMPLATE);
                         entries.add(ModItems.ARIS_BOW);
+                        entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
+                        entries.add(ModItems.CAULIFLOWER_SEEDS);
+                        entries.add(ModItems.HONEY_BERRIES);
+                        entries.add(ModItems.MANTIS_SPAWN_EGG);
 
 
                     }).build());
@@ -62,6 +66,16 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.PINK_GARNET_PRESSURE_PLATE);
 
                         entries.add(ModBlocks.PINK_GARNET_LAMP);
+
+                        entries.add(ModBlocks.DRIFTWOOD_LOG);
+                        entries.add(ModBlocks.DRIFTWOOD_WOOD);
+                        entries.add(ModBlocks.STRIPPED_DRIFTWOOD_LOG);
+                        entries.add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD);
+
+                        entries.add(ModBlocks.DRIFTWOOD_PLANKS);
+                        entries.add(ModBlocks.DRIFTWOOD_LEAVES);
+
+                        entries.add(ModBlocks.DRIFTWOOD_SAPLING);
 
                     }).build());
     public static void registerItemsGroups(){

@@ -1,10 +1,13 @@
 package net.aris.tutorialmod.block;
 
 import net.aris.tutorialmod.TutorialMod;
-import net.aris.tutorialmod.block.custom.MagicBlock;
-import net.aris.tutorialmod.block.custom.PinkGarnetLampBlock;
+import net.aris.tutorialmod.block.custom.*;
+import net.aris.tutorialmod.sound.ModSounds;
+import net.aris.tutorialmod.util.ModTags;
+import net.aris.tutorialmod.world.tree.ModSaplingGenerators;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -26,12 +29,18 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(3f).requiresTool()));
 
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
-            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
+            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
 
     public static final Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3,6),
                     AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block PINK_GARNET_NETHER_ORE = registerBlock("pink_garnet_nether_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(1,5),
+                    AbstractBlock.Settings.create().strength(3f).requiresTool()));
+    public static final Block PINK_GARNET_END_ORE = registerBlock("pink_garnet_end_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(4,8),
+                    AbstractBlock.Settings.create().strength(7f).requiresTool()));
 
     public static final Block PINK_GARNET_STAIRS = registerBlock("pink_garnet_stairs",
             new StairsBlock(ModBlocks.PINK_GARNET_BLOCK.getDefaultState(),
@@ -66,9 +75,38 @@ public class ModBlocks {
             new PinkGarnetLampBlock(AbstractBlock.Settings.create()
                     .strength(1f).requiresTool().luminance(state -> state.get(PinkGarnetLampBlock.CLICKED)? 15:0)));
 
+    public static final Block CAULIFLOWER_CROP = registerBlockWithoutBlockItem("cauliflower_crop",
+            new CauliflowerCropBlock(AbstractBlock.Settings.create().noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
+    public static final Block HONEY_BERRY_BUSH = registerBlockWithoutBlockItem("honey_berry_bush",
+            new HoneyBerryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)));
+
+    public static final Block DRIFTWOOD_LOG = registerBlock("driftwood_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+    public static final Block DRIFTWOOD_WOOD = registerBlock("driftwood_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+
+
+    public static final Block STRIPPED_DRIFTWOOD_LOG = registerBlock("stripped_driftwood_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final Block STRIPPED_DRIFTWOOD_WOOD = registerBlock("stripped_driftwood_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final Block DRIFTWOOD_PLANKS = registerBlock("driftwood_planks",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+    public static final Block DRIFTWOOD_LEAVES = registerBlock("driftwood_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+
+
+    public static final Block DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling",
+            new ModSaplingBlock(ModSaplingGenerators.DRIFTWOOD,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING),Blocks.STONE));
+
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID,name),block);
+    }
+    private static Block registerBlockWithoutBlockItem(String name, Block block){
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID,name),block);
     }
     private static void registerBlockItem(String name, Block block){
