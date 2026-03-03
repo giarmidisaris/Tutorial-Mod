@@ -1,8 +1,8 @@
-// 1.21	2026-03-02T22:32:21.1854719	Tutorial Mod/null
+// 1.21	2026-03-03T16:04:33.7563868	Tutorial Mod/null
 e336321ea1fc9ae816052f453ffa3778fbb65e51 data\tutorialmod\enchantment\lightning_striker.json
 49b7301e34ddf925b7691873183712e13be0dab1 data\tutorialmod\worldgen\placed_feature\pink_garnet_ore_placed.json
-71f703c1e3662cffcd2d53f12d3b63d3ca44d44c data\tutorialmod\worldgen\configured_feature\pink_garnet_ore.json
 454d4a2960bb565a3e43bbdcebbd00f18ebd8b4a data\tutorialmod\worldgen\configured_feature\driftwood.json
+71f703c1e3662cffcd2d53f12d3b63d3ca44d44c data\tutorialmod\worldgen\configured_feature\pink_garnet_ore.json
 9db0b18622971eefc5f66b450a4dd3a925f84c94 data\tutorialmod\worldgen\configured_feature\honey_berry_bush.json
 c8755c065a2eeab2b497e8d37c52b3b13cadff0f data\tutorialmod\worldgen\placed_feature\honey_berry_bush_placed.json
 7a3f15654432df3e07797bc6b4c446d30171931d data\tutorialmod\worldgen\configured_feature\nether_pink_garnet_ore.json

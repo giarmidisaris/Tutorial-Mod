@@ -41,7 +41,8 @@ public class ModItemsGroups {
                         entries.add(ModItems.CAULIFLOWER_SEEDS);
                         entries.add(ModItems.HONEY_BERRIES);
                         entries.add(ModItems.MANTIS_SPAWN_EGG);
-
+                        entries.add(ModItems.TOMAHAWK);
+                        entries.add(ModItems.SPECTRE_STAFF);
 
                     }).build());
     public static final ItemGroup PINK_GARNET_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -76,6 +77,7 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.DRIFTWOOD_LEAVES);
 
                         entries.add(ModBlocks.DRIFTWOOD_SAPLING);
+                        entries.add(ModBlocks.CHAIR);
 
                     }).build());
     public static void registerItemsGroups(){

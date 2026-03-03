@@ -75,12 +75,17 @@
   "block.tutorialmod.driftwood_sapling": "Driftwood Sapling",
 
   "item.tutorialmod.mantis_spawn_egg": "Mantis Spawn Egg",
+  "item.tutorialmod.tomahawk": "Tomahawk",
 
   "block.tutorialmod.pink_garnet_ore": "Pink Garnet Ore",
   "block.tutorialmod.pink_garnet_end_ore": "Pink Garnet End Ore",
   "block.tutorialmod.pink_garnet_nether_ore": "Pink Garnet Nether Ore",
 
   "block.tutorialmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+
+  "block.tutorialmod.chair": "Chair",
+  "item.tutorialmod.spectre_staff": "Spectre Staff",
+
 
   "block.tutorialmod.magic_block": "Magic Block",
   "tooltip.tutorialmod.magic_block.tooltip": "This block is very,very, ¶PEOS¶",
@@ -92,5 +97,7 @@
   "tooltip.tutorialmod.chisel": "Press §eShift§r for more Information",
   "tooltip.tutorialmod.cauliflower.tooltip": "This is Crap...",
 
-  "entity.tutorialmod.mantis": "Mantis"
+  "entity.tutorialmod.mantis": "Mantis",
+  "entity.tutorialmod.tomahawk": "Tomahawk",
+  "entity.minecraft.villager.tutorialmod.kaupenger": "Kaupenger"
 }

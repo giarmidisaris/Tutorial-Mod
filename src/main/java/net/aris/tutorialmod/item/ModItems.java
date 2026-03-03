@@ -6,6 +6,7 @@ import net.aris.tutorialmod.entity.ModEntities;
 import net.aris.tutorialmod.item.custom.ChiselItem;
 import net.aris.tutorialmod.item.custom.HammerItem;
 import net.aris.tutorialmod.item.custom.ModArmorItem;
+import net.aris.tutorialmod.item.custom.TomahawkItem;
 import net.aris.tutorialmod.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -89,6 +90,13 @@ public class ModItems {
 
     public static final Item MANTIS_SPAWN_EGG = registerItem("mantis_spawn_egg",
             new SpawnEggItem(ModEntities.MANTIS, 0x9dc783, 0xbfaf5f, new Item.Settings()));
+
+    public static final Item TOMAHAWK = registerItem("tomahawk",
+            new TomahawkItem(new Item.Settings().maxCount(16)));
+
+    public static final Item SPECTRE_STAFF = registerItem("spectre_staff",
+            new Item(new Item.Settings().maxCount(1)));
+
 
     public static void registerModItems(){
         TutorialMod.LOGGER.info("Registering Mod Items for "+TutorialMod.MOD_ID);
