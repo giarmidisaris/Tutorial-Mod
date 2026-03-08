@@ -82,9 +82,17 @@
   "block.tutorialmod.pink_garnet_nether_ore": "Pink Garnet Nether Ore",
 
   "block.tutorialmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+  "block.tutorialmod.gravely_sand1": "Gravely Sand 1",
+  "block.tutorialmod.gravely_sand13": "Gravely Sand 13",
+  "block.tutorialmod.gravely_sand26": "Gravely Sand 26",
+  "block.tutorialmod.gravely_sand13vol2": "Gravely Sand 13vol2",
+  "block.tutorialmod.gravely_sand26vol2": "Gravely Sand 26vol2",
+  "block.tutorialmod.compressed_basalt": "Compressed Basalt",
 
   "block.tutorialmod.chair": "Chair",
   "item.tutorialmod.spectre_staff": "Spectre Staff",
+  "block.tutorialmod.pedestal": "Pedestal",
+  "block.tutorialmod.growth_chamber": "Growth Chamber",
 
 
   "block.tutorialmod.magic_block": "Magic Block",
@@ -92,6 +100,7 @@
 
   "itemgroup.tutorialmod.pink_garnet_items": "Pink Garnet Items",
   "itemgroup.tutorialmod.pink_garnet_blocks": "Pink Garnet Blocks",
+  "itemgroup.tutorialmod.deep_water_blocks": "Deep Water Blocks",
 
   "tooltip.tutorialmod.chisel.shift_down": "This item §bchisels§r",
   "tooltip.tutorialmod.chisel": "Press §eShift§r for more Information",

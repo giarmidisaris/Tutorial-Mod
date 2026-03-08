@@ -25,6 +25,17 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAVELY_SAND1);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAVELY_SAND13);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAVELY_SAND26);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAVELY_SAND13vol2);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAVELY_SAND26vol2);
+
+        blockStateModelGenerator.registerLog(ModBlocks.COMPRESSED_BASALT).log(ModBlocks.COMPRESSED_BASALT);
+
+
+
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_END_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_NETHER_ORE);
 
@@ -57,6 +68,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.DRIFTWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CHAIR);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GROWTH_CHAMBER);
     }
 
     @Override

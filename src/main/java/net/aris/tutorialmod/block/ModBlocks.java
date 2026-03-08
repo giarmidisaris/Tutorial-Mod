@@ -104,6 +104,33 @@ public class ModBlocks {
     public static final Block CHAIR = registerBlock("chair",
             new ChairBlock(AbstractBlock.Settings.create().nonOpaque()));
 
+    public static final Block PEDESTAL = registerBlock("pedestal",
+            new PedestalBlock(AbstractBlock.Settings.create().nonOpaque()));
+
+    public static final Block GROWTH_CHAMBER = registerBlock("growth_chamber",
+            new GrowthChamberBlock(AbstractBlock.Settings.create()));
+
+    //DeepWater testing blocks
+    public static final Block GRAVELY_SAND1 = registerBlock("gravely_sand1",
+            new Block(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.SAND)));
+
+    public static final Block GRAVELY_SAND13 = registerBlock("gravely_sand13",
+            new Block(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.SAND)));
+
+    public static final Block GRAVELY_SAND26 = registerBlock("gravely_sand26",
+            new Block(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.SAND)));
+
+    public static final Block GRAVELY_SAND13vol2 = registerBlock("gravely_sand13vol2",
+            new Block(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.SAND)));
+
+    public static final Block GRAVELY_SAND26vol2 = registerBlock("gravely_sand26vol2",
+            new Block(AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.SAND)));
+
+    public static final Block COMPRESSED_BASALT = registerBlock("compressed_basalt",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.BASALT)));
+
+
+
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
@@ -122,6 +149,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.PINK_GARNET_BLOCK);
             entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
+            entries.add(ModBlocks.GRAVELY_SAND1);
         });
     }
 }

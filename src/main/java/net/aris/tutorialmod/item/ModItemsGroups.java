@@ -5,6 +5,7 @@ import net.aris.tutorialmod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -78,6 +79,19 @@ public class ModItemsGroups {
 
                         entries.add(ModBlocks.DRIFTWOOD_SAPLING);
                         entries.add(ModBlocks.CHAIR);
+
+                    }).build());
+    public static final ItemGroup DEEP_WATER_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TutorialMod.MOD_ID, "deep_water_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(Items.TRIDENT))
+                    .displayName(Text.translatable("itemgroup.tutorialmod.deep_water_blocks"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.GRAVELY_SAND1);
+                        entries.add(ModBlocks.GRAVELY_SAND13);
+                        entries.add(ModBlocks.GRAVELY_SAND26);
+                        entries.add(ModBlocks.GRAVELY_SAND13vol2);
+                        entries.add(ModBlocks.GRAVELY_SAND26vol2);
+                        entries.add(ModBlocks.COMPRESSED_BASALT);
 
                     }).build());
     public static void registerItemsGroups(){

@@ -1,6 +1,7 @@
 package net.aris.tutorialmod;
 
 import net.aris.tutorialmod.block.ModBlocks;
+import net.aris.tutorialmod.block.entity.ModBlockEntities;
 import net.aris.tutorialmod.component.ModDataComponentTypes;
 import net.aris.tutorialmod.effect.ModEffects;
 import net.aris.tutorialmod.enchantment.ModEnchantmentEffects;
@@ -8,9 +9,13 @@ import net.aris.tutorialmod.entity.ModEntities;
 import net.aris.tutorialmod.entity.custom.MantisEntity;
 import net.aris.tutorialmod.item.ModItems;
 import net.aris.tutorialmod.item.ModItemsGroups;
+import net.aris.tutorialmod.particle.ModParticles;
 import net.aris.tutorialmod.potion.ModPotions;
+import net.aris.tutorialmod.recipe.ModRecipes;
+import net.aris.tutorialmod.screen.ModScreenHandlers;
 import net.aris.tutorialmod.sound.ModSounds;
 import net.aris.tutorialmod.util.HammerUsageEvent;
+import net.aris.tutorialmod.util.ModLootTableModifiers;
 import net.aris.tutorialmod.villager.ModVillagers;
 import net.aris.tutorialmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -51,6 +56,11 @@ public class TutorialMod implements ModInitializer {
 		ModEnchantmentEffects.registerEnchantmentEffects();
 		ModWorldGeneration.generateModWorldGen();
 		ModVillagers.registerVillagers();
+		ModParticles.registerParticles();
+		ModLootTableModifiers.modifyLootTables();
+		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
+		ModRecipes.registerRecipes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES,600);
 
