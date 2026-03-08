@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 
 import java.util.Optional;
@@ -32,8 +33,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAVELY_SAND26vol2);
 
         blockStateModelGenerator.registerLog(ModBlocks.COMPRESSED_BASALT).log(ModBlocks.COMPRESSED_BASALT);
-
-
+        blockStateModelGenerator.blockStateCollector.accept(
+                BlockStateModelGenerator.createSingletonBlockState(
+                        ModBlocks.ALGAE_CARPET,
+                        Models.CARPET.upload(
+                                ModBlocks.ALGAE_CARPET,
+                                TextureMap.of(TextureKey.WOOL, Registries.BLOCK.getId(ModBlocks.ALGAE_CARPET)),
+                                blockStateModelGenerator.modelCollector
+                        )
+                )
+        );
 
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_END_ORE);

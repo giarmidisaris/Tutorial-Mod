@@ -129,8 +129,8 @@ public class ModBlocks {
     public static final Block COMPRESSED_BASALT = registerBlock("compressed_basalt",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.BASALT)));
 
-
-
+    public static final Block ALGAE_CARPET = registerBlock("algae_carpet",
+            new AlgaeCarpetBlock(AbstractBlock.Settings.copy(Blocks.MOSS_CARPET).nonOpaque()));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

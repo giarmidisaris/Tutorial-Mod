@@ -92,6 +92,7 @@ public class ModItemsGroups {
                         entries.add(ModBlocks.GRAVELY_SAND13vol2);
                         entries.add(ModBlocks.GRAVELY_SAND26vol2);
                         entries.add(ModBlocks.COMPRESSED_BASALT);
+                        entries.add(ModBlocks.ALGAE_CARPET);
 
                     }).build());
     public static void registerItemsGroups(){

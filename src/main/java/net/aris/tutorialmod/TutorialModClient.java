@@ -34,6 +34,8 @@ public class TutorialModClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DRIFTWOOD_SAPLING, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ALGAE_CARPET, RenderLayer.getTranslucent());
+
         ModModelPredicates.registerModelPredicates();
 
         EntityModelLayerRegistry.registerModelLayer(MantisModel.MANTIS, MantisModel::getTexturedModelData);
